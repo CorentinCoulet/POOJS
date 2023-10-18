@@ -32,8 +32,8 @@ const canvasHeight = canvas.height;
 // });
 
 addEventListener("click", function(event){
-    const valueX = event.clientX;
-    const valueY = event.clientY;
+    const valueX = event.clientX - canvasBoudings.left;
+    const valueY = event.clientY - canvasBoudins.top;
     const randomValue = Math.floor(Math.random() * (80 - 20) + 20);
 
     const ellipse = new Ellipse(valueX, valueY, randomValue, randomValue, '#'+(Math.random()*0xFFFFFF<<0).toString(16));
